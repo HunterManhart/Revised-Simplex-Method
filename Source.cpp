@@ -115,7 +115,7 @@ int main()
 {	
 	// Header
 	cout << "RevisedSimplex 0.10 <Hunter Manhart, 20 November 2015>" << endl;
-	//cout << "Input >> ";  // You said "should not prompt for input" but...
+	cout << "Input >> ";  
 	
 
 	// Input
@@ -125,9 +125,9 @@ int main()
 
 	cin >> m >> n;
 
-	ofstream out("out1.txt");
-	streambuf *coutbuf = std::cout.rdbuf(); //save old buf
-	cout.rdbuf(out.rdbuf()); //redirect std::cout to out.txt!
+	//ofstream out("out1.txt");
+	//streambuf *coutbuf = std::cout.rdbuf(); //save old buf
+	//cout.rdbuf(out.rdbuf()); //redirect std::cout to out.txt!
 
 	if (m > MAX_RESTRICT || n > MAX_VARS) {
 		string str;
@@ -331,7 +331,7 @@ int main()
 		cout << ")" << endl << "No optimal solution found" << endl;
 	}
 
-	cout.rdbuf(coutbuf); //reset to standard output again
+	//cout.rdbuf(coutbuf); //reset to standard output again
 
 	// Politely kick the user from the program
 	string str;
